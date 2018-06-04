@@ -1,0 +1,26 @@
+<FloatLayout>:
+    msgText :msgText
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_x: 100
+        size_hint_y: 100
+        height: 100
+    TextInput:
+        id: msgText
+        input_type:
+        focus: True
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_x: None
+        size_hint_y: None
+        height: 100
+        Button:
+            text: 'Save'
+            size_hint_x: None
+            width: 150
+            on_press: root.saveFile(*args)
+        Button:
+            text: 'Load'
+            size_hint_x: None
+            width: 150
+            on_press: root.loadFile(*args)
